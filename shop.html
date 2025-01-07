@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop - E-commerce PWA</title>
+    
+    <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- PWA-specific meta tags -->
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Browse products in our e-commerce store">
+</head>
+<body>
+    <header>
+        <h1>Shop Our Products</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-content">
+            <h2>Featured Products</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRkn1Z_uoqlYSEz6-WBawCHm-tBl072Sbt3Hj8rK6bL3Atds6V1JMUol87lkvXBPPIFDwe4kbp7E_x6cN7IdjJfSk2gwc9khd5D1vciTrkl&usqp=CAc" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>$20.00</p>
+                    <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,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" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>$30.00</p>
+                    <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQK_BpIGgwrIGdkWtx7WLD-plseQKXUq4PDKLCnhXEEZh7HSrt8a9kuI_7Iw5eO4qbvujhQjfXrEJxVpf6HKe5xQsSmdP5KdevmN7oY-I7GYiPmQTZrpcf6du5SiomLDRvb6oeIzx1YlTE&usqp=CAc" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>$40.00</p>
+                    <button class="add-to-cart" data-product-id="3">Add to Cart</button>
+                </div>
+
+                <!-- More product cards can be added here dynamically -->
+            </div>
+        </section>
+    </main>
+<style>
+    /* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f2a900;
+}
+
+/* Main content section */
+main {
+    padding: 20px;
+}
+
+/* Product section styles */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.product button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #f2a900;
+}
+
+/* Responsive Design for different screen sizes */
+@media (min-width: 768px) {
+    .product {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product {
+        width: 30%;
+    }
+}
+/* Shop Page Styles */
+.shop-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.shop-content h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.product-card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.product-card .add-to-cart {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #f2a900;
+}
+
+/* Responsive Design for Shop Page */
+@media (min-width: 768px) {
+    .shop-content {
+        padding: 40px;
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+}
+
+</style>
+<script>
+    // Example JavaScript for handling product actions in the shop
+
+// Function to add product to cart
+function addToCart(event) {
+    const productId = event.target.getAttribute('data-product-id');
+    const productName = event.target.parentElement.querySelector('h3').textContent;
+    const productPrice = parseFloat(event.target.parentElement.querySelector('p').textContent.replace('$', ''));
+
+    // Get the current cart from localStorage (or create an empty one if none exists)
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add the product to the cart
+    const existingProductIndex = cart.findIndex(item => item.id === productId);
+    if (existingProductIndex !== -1) {
+        // If the product already exists, increase its quantity
+        cart[existingProductIndex].quantity += 1;
+    } else {
+        // Otherwise, add the new product with a quantity of 1
+        cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
+    }
+
+    // Save the updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Optionally show an alert or message
+    alert(`${productName} has been added to your cart!`);
+}
+
+// Attach event listeners to "Add to Cart" buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', addToCart);
+});
+
+</script>
+</body>
+</html>

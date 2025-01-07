@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Profile - E-commerce PWA</title>
+    
+    <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- PWA-specific meta tags -->
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="User profile page for the e-commerce platform">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-content">
+            <h2>Your Profile</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="username">Full Name</label>
+                    <input type="text" id="username" name="username" value="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" value="password123" required>
+                </div>
+                <button type="submit" class="save-button">Save Changes</button>
+            </form>
+
+            <div class="profile-actions">
+                <button class="logout-button"><a href="./index.html">Logout</a></button>
+            </div>
+        </section>
+    </main>
+<style>
+ /* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f2a900;
+}
+
+/* Main content section */
+main {
+    padding: 20px;
+}
+
+/* Product section styles */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.product button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #f2a900;
+}
+
+/* Responsive Design for different screen sizes */
+@media (min-width: 768px) {
+    .product {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product {
+        width: 30%;
+    }
+}
+/* Profile Page Styles */
+.profile-content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.save-button:hover {
+    background-color: #f2a900;
+}
+
+.profile-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.logout-button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Responsive Design for Profile Page */
+@media (min-width: 768px) {
+    .profile-content {
+        padding: 40px;
+    }
+
+    .save-button {
+        width: auto;
+    }
+
+    .logout-button {
+        width: auto;
+    }
+}
+
+</style>
+<script>
+    // Example JavaScript for handling profile page functionality
+
+// Get form elements
+const profileForm = document.getElementById('profileForm');
+const logoutButton = document.querySelector('.logout-button');
+
+// Handle form submission (saving changes)
+profileForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Simulate saving changes (you can implement actual API calls or local storage here)
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    console.log('Profile updated:', { username, email, password });
+
+    // Show a success message or redirect (for demonstration, we'll just alert)
+    alert('Profile updated successfully!');
+});
+
+// Handle logout functionality (clear session or redirect)
+logoutButton.addEventListener('click', function() {
+    // Simulate logout (clear localStorage, cookies, or API session)
+    console.log('User logged out');
+
+    // For example, clear localStorage or sessionStorage:
+    // localStorage.removeItem('user');
+    
+    // Redirect to home page after logout
+    window.location.href = '/';
+});
+
+</script>
+</body>
+</html>
